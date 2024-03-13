@@ -7,10 +7,26 @@ function NavTabs({ currentPage, handlePageChange }) {
     backgroundSize: "cover",
     height: "150px",
     backgroundRepeat: "no-repeat",
+    display: "flex", 
+    alignItems: "center", 
+    paddingLeft: "10px", 
+  };
+  const avatarStyle = {
+    width: "50px", 
+    height: "50px",
+    borderRadius: "50%", 
+    marginRight: "10px", 
   };
 
   return (
     <ul className="d-flex justify-content-end nav m-auto" style={navStyle}>
+       <div>
+        <img
+         src="/public/jerry.gif"
+         alt="Avatar"
+         style={avatarStyle}
+        />
+        </div>
       <li className="nav-item mt-3 mx-2">
         <a
           href="#home"

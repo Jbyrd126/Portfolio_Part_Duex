@@ -1,22 +1,29 @@
-import { useState } from 'react';
-import NavTabs from './NavTabs';
-import Home from './pages/Home';
-import About from './pages/About';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
+import { useState } from "react";
+import NavTabs from "./NavTabs";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import "../index.css"; // Import the CSS file
+import MyCarousel from "../Carousel";
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState("Home");
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
+    if (currentPage === "Home") {
+      return (
+        <div>
+          <MyCarousel />
+          <Home />
+        </div>
+      );
     }
-    if (currentPage === 'About') {
+    if (currentPage === "About") {
       return <About />;
     }
-    if (currentPage === 'Blog') {
+    if (currentPage === "Blog") {
       return <Blog />;
     }
     return <Contact />;

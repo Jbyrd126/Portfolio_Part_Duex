@@ -1,20 +1,56 @@
+import React from 'react';
+import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa';
+
 export default function Contact() {
   return (
-    <div>
+    <div style={styles.container}>
       <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <div style={styles.contentContainer}>
+        <div style={styles.linksContainer}>
+          <a href="https://www.linkedin.com/in/your-linkedin-profile" style={styles.link}>
+            <FaLinkedin size={60} /> {/* Doubled the size */}
+            <span style={styles.linkText}>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Jbyrd126" style={styles.link}>
+            <FaGithub size={60} /> {/* Doubled the size */}
+            <span style={styles.linkText}>GitHub</span>
+          </a>
+          <a href="mailto:jbyrd126@gmail.com" style={styles.link}>
+            <FaEnvelope size={60} /> {/* Doubled the size */}
+            <span style={styles.linkText}>Email</span>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '20px',
+  },
+  contentContainer: {
+    width: '80%', // 80% of the viewport width
+    margin: '0 auto', // Center the container
+  },
+  linksContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row', // Display icons in a row
+    marginTop: '20px',
+  },
+  link: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '0 15px',
+    textDecoration: 'none',
+    color: '#333',
+  },
+  linkText: {
+    marginTop: '10px',
+    fontSize: '14px',
+  },
+};

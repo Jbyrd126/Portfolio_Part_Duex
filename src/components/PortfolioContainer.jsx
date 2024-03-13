@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavTabs from "./NavTabs";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Blog from "./pages/Blog";
+import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import "../index.css"; // Import the CSS file
 import MyCarousel from "../Carousel";
@@ -23,8 +23,8 @@ export default function PortfolioContainer() {
     if (currentPage === "About") {
       return <About />;
     }
-    if (currentPage === "Blog") {
-      return <Blog />;
+    if (currentPage === "Resume") {
+      return <Resume />;
     }
     return <Contact />;
   };

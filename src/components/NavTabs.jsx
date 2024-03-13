@@ -3,15 +3,15 @@
 function NavTabs({ currentPage, handlePageChange }) {
   const navStyle = {
     backgroundImage:
-      'url("/src/assets/images/dark-blue-wooden-wall-texture.jpg")',
-    backgroundSize: "fill",
+      'url("/src/assets/images/colors.gif")',
+    backgroundSize: "cover",
     height: "150px",
     backgroundRepeat: "no-repeat",
   };
 
   return (
     <ul className="d-flex justify-content-end nav m-auto" style={navStyle}>
-      <li className="nav-item m-1">
+      <li className="nav-item mt-3 mx-2">
         <a
           href="#home"
           onClick={() => handlePageChange("Home")}
@@ -20,16 +20,25 @@ function NavTabs({ currentPage, handlePageChange }) {
           className={currentPage === "Home" ? "nav-link active" : "nav-link"}
           style={{
             fontSize: "30px",
-            backgroundColor: "white",
+            transition: "color 0.3s, font-size 0.3s", 
             color: "black",
-            borderRadius: "15px",
-            padding: "10px",
+           
           }}
+
+          onMouseOver={(e) => {
+            e.target.classList.add("hovered-link"); 
+            e.target.classList.add("pulsate-animation"); 
+          }}
+          onMouseOut={(e) => {
+            e.target.classList.remove("hovered-link"); 
+            e.target.classList.remove("pulsate-animation");
+          }}
+
         >
           Home
         </a>
       </li>
-      <li className="nav-item m-1">
+      <li className="nav-item mt-3 mx-2">
         <a
           href="#about"
           onClick={() => handlePageChange("About")}
@@ -37,33 +46,55 @@ function NavTabs({ currentPage, handlePageChange }) {
           className={currentPage === "About" ? "nav-link active" : "nav-link"}
           style={{
             fontSize: "30px",
-            backgroundColor: "white",
+            transition: "color 0.3s, font-size 0.3s", 
             color: "black",
-            borderRadius: "15px",
-            padding: "10px",
+            
           }}
+        
+
+          onMouseOver={(e) => {
+            e.target.classList.add("hovered-link"); 
+            e.target.classList.add("pulsate-animation"); 
+          }}
+          onMouseOut={(e) => {
+            e.target.classList.remove("hovered-link"); 
+            e.target.classList.remove("pulsate-animation");
+          }}
+
+
+
         >
           About
         </a>
       </li>
-      <li className="nav-item m-1">
+      <li className="nav-item mt-3 mx-2">
         <a
-          href="#blog"
-          onClick={() => handlePageChange("Blog")}
+          href="#resume"
+          onClick={() => handlePageChange("Resume")}
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === "Blog" ? "nav-link active" : "nav-link"}
+          className={currentPage === "Resume" ? "nav-link active" : "nav-link"}
           style={{
             fontSize: "30px",
-            backgroundColor: "white",
+            transition: "color 0.3s, font-size 0.3s", 
             color: "black",
-            borderRadius: "15px",
-            padding: "10px",
+           
           }}
+
+          onMouseOver={(e) => {
+            e.target.classList.add("hovered-link"); 
+            e.target.classList.add("pulsate-animation"); 
+          }}
+          onMouseOut={(e) => {
+            e.target.classList.remove("hovered-link"); 
+            e.target.classList.remove("pulsate-animation");
+          }}
+
+
         >
-          Blog
+        Resume
         </a>
       </li>
-      <li className="nav-item m-1">
+      <li className="nav-item mt-3 mx-2">
         <a
           href="#contact"
           onClick={() => handlePageChange("Contact")}
@@ -71,11 +102,21 @@ function NavTabs({ currentPage, handlePageChange }) {
           className={currentPage === "Contact" ? "nav-link active" : "nav-link"}
           style={{
             fontSize: "30px",
-            backgroundColor: "white",
+            transition: "color 0.3s, font-size 0.3s", 
             color: "black",
-            borderRadius: "15px",
-            padding: "10px",
+           
           }}
+
+          onMouseOver={(e) => {
+            e.target.classList.add("hovered-link"); 
+            e.target.classList.add("pulsate-animation"); 
+          }}
+          onMouseOut={(e) => {
+            e.target.classList.remove("hovered-link"); 
+            e.target.classList.remove("pulsate-animation");
+          }}
+
+
         >
           Contact
         </a>
